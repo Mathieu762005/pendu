@@ -3,6 +3,11 @@ let motAdeviner = motsPendu[Math.floor(Math.random() * (motsPendu.length + 1))]
 console.log(motAdeviner)
 let choixUser = 0
 
+function recupLettres(choix) {
+    choixUser == choix
+    console.log(choixUser)
+}
+
 for (i = 0; i > motAdeviner; i++) {
     if (motAdeviner.charAt(i) == choixUser) {
         document.getElementById("lettrePendu").innerHTML = choixUser
@@ -27,6 +32,3 @@ for (i = 0; i > motAdeviner; i++) {
     }
 }
 
-function recupLettres() {
-    
-}
