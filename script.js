@@ -9,8 +9,8 @@ function recupLettres(choix) {
     console.log(choixUser)
 }
 
-for (i = 0; i > motAdeviner.length; i++) {
-    document.getElementById("lettrePendu").innerText += "_"
+for (i = 0; i < motAdeviner.length; i++) {
+    document.getElementById("lettrePendu").innerText += " _ " 
 }
 
 
