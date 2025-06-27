@@ -1,19 +1,8 @@
-// Ma liste de mots
-const motsPendu = ["cafe", "binouze", "cailloux"]
-
-// Pour Stack mon mot aleatoire en majuscule
+const motsPendu = ["cafe", "binouze", "cailloux", "rum", "voiture", "moto", "maison"]
 let motAdeviner = motsPendu[Math.floor(Math.random() * (motsPendu.length))].toUpperCase()
-
-// Pour stack mon choix de lettre
 let choixUser = ""
-
-// pour stack mes emplacement
 const underscore = []
-
 let erreur = 0
-
-console.log(motAdeviner)
-
 
 // Placer les underscores par rapport au nombre de lettres du mot
 for (let i = 0; i < motAdeviner.length; i++) {
@@ -36,43 +25,49 @@ function recupLettres(choixUser) {
     } else {
         erreur++
         document.getElementById("pendu").innerHTML = `<img src="img/1.PNG" alt=""></img>`
-        if (erreur == 2) {
-            document.getElementById("pendu").innerHTML = `<img src="img/2.PNG" alt=""></img>`
-        } else if (erreur == 3) {
-            document.getElementById("pendu").innerHTML = `<img src="img/3.PNG" alt=""></img>`
-        } else if (erreur == 4) {
-            document.getElementById("pendu").innerHTML = `<img src="img/4.PNG" alt=""></img>`
-        } else if (erreur == 5) {
-            document.getElementById("pendu").innerHTML = `<img src="img/5.PNG" alt=""></img>`
-        } else if (erreur == 6) {
-            document.getElementById("pendu").innerHTML = `<img src="img/6.PNG" alt=""></img>`
-        } else if (erreur == 7) {
-            document.getElementById("pendu").innerHTML = `<img src="img/7.PNG" alt=""></img>`
-        } else if (erreur == 8) {
-            document.getElementById("pendu").innerHTML = `<img src="img/8.PNG" alt=""></img>`
-        } else if (erreur == 9) {
-            document.getElementById("pendu").innerHTML = `<img src="img/9.PNG" alt=""></img>`
-            setTimeout(() => {
-                document.getElementById("pendu").innerHTML = `<img src="img/Game Over GIF.gif" id="refresh" alt=""></img>`
-            }, 1000);
-            setTimeout(() => {
-            location.reload();
-            }, 2500);
+        switch (erreur) {
+            case 2:
+                document.getElementById("pendu").innerHTML = `<img src="img/2.PNG" alt=""></img>`
+                break
+            case 3:
+                document.getElementById("pendu").innerHTML = `<img src="img/3.PNG" alt=""></img>`
+                break
+            case 4:
+                document.getElementById("pendu").innerHTML = `<img src="img/4.PNG" alt=""></img>`
+                break
+            case 5:
+                document.getElementById("pendu").innerHTML = `<img src="img/5.PNG" alt=""></img>`
+                break
+            case 6:
+                document.getElementById("pendu").innerHTML = `<img src="img/6.PNG" alt=""></img>`
+                break
+            case 7:
+                document.getElementById("pendu").innerHTML = `<img src="img/7.PNG" alt=""></img>`
+                break
+            case 8:
+                document.getElementById("pendu").innerHTML = `<img src="img/8.PNG" alt=""></img>`
+                break
+            case 9:
+                document.getElementById("pendu").innerHTML = `<img src="img/9.PNG" alt=""></img>`
+                setTimeout(() => {
+                    document.getElementById("pendu").innerHTML = `<img src="img/Game Over GIF.gif" id="refresh" alt=""></img>`
+                }, 1000);
+                setTimeout(() => {
+                    location.reload();
+                }, 3000);
+                break
         }
     }
+
     document.getElementById("lettrePendu").innerText = underscore.join(" ");
+
+    if (underscore.join("") === motAdeviner) {
+        document.getElementById("pendu").innerHTML = `<img src="img/Happy Lets Go GIF by NHL.gif" width="490" alt="">`
+        setTimeout(() => {
+            location.reload();
+        }, 6500);
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
