@@ -19,6 +19,7 @@ console.log(motAdeviner)
 for (let i = 0; i < motAdeviner.length; i++) {
     underscore.push("_");
 }
+document.getElementById("lettrePendu").innerText = underscore.join(" ");
 
 // la function pour le jeux
 function recupLettres(choixUser) {
@@ -53,24 +54,13 @@ function recupLettres(choixUser) {
             document.getElementById("pendu").innerHTML = `<img src="img/9.PNG" alt=""></img>`
             setTimeout(() => {
                 document.getElementById("pendu").innerHTML = `<img src="img/Game Over GIF.gif" id="refresh" alt=""></img>`
-            }, 1500);
+            }, 1000);
             setTimeout(() => {
-                // On ajoute le bouton dans le DOM
-                document.getElementById("pendu").innerHTML = `<input type="button" value="Rafraichir" id="refresh" />`;
-
-                // Ensuite, on récupère le bouton fraichement créé
-                let refresh = document.getElementById("refresh");
-
-                // Et on ajoute le bon event listener
-                refresh.addEventListener('click', () => {
-                    location.reload();
-                });
+            location.reload();
             }, 2500);
         }
     }
     document.getElementById("lettrePendu").innerText = underscore.join(" ");
-
-    console.log(erreur)
 }
 
 
