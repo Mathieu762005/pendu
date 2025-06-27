@@ -1,9 +1,11 @@
 .body {
     height: 100vh;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
 }
 
 .main {
     width: 31rem;
+    background-color: rgb(60, 60, 60);
 }
 
 #pendu {
@@ -12,4 +14,8 @@
 
 #lettrePendu {
     min-height: 4rem;
+}
+
+.btn {
+ background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
 }

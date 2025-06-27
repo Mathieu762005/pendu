@@ -6,9 +6,9 @@ let erreur = 0
 
 // Placer les underscores par rapport au nombre de lettres du mot
 for (let i = 0; i < motAdeviner.length; i++) {
-    underscore.push("_");
+    underscore.push("_")
 }
-document.getElementById("lettrePendu").innerText = underscore.join(" ");
+document.getElementById("lettrePendu").innerText = underscore.join(" ")
 
 // la function pour le jeux
 function recupLettres(choixUser) {
@@ -51,21 +51,21 @@ function recupLettres(choixUser) {
                 document.getElementById("pendu").innerHTML = `<img src="img/9.PNG" alt=""></img>`
                 setTimeout(() => {
                     document.getElementById("pendu").innerHTML = `<img src="img/Game Over GIF.gif" id="refresh" alt=""></img>`
-                }, 1000);
+                }, 1000)
                 setTimeout(() => {
-                    location.reload();
-                }, 3000);
+                    location.reload()
+                }, 3000)
                 break
         }
     }
 
-    document.getElementById("lettrePendu").innerText = underscore.join(" ");
+    document.getElementById("lettrePendu").innerText = underscore.join(" ")
 
     if (underscore.join("") === motAdeviner) {
         document.getElementById("pendu").innerHTML = `<img src="img/Happy Lets Go GIF by NHL.gif" width="490" alt="">`
         setTimeout(() => {
-            location.reload();
-        }, 6500);
+            location.reload()
+        }, 6500)
     }
 }
 
