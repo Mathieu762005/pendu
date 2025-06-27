@@ -5,3 +5,11 @@
 .main {
     width: 31rem;
 }
+
+#pendu {
+    min-height: 20rem;
+}
+
+#lettrePendu {
+    min-height: 4rem;
+}
